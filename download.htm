@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="renderer" content="webkit">
+	<style>
+        html {
+            width: 100%;
+            height: 100%;
+            overflow: scroll;
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: 300;
+           
+        }
+
+        @media (max-width: 350px) {
+            html {
+                font-size: 18px;
+            }
+        }
+
+        .success {
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            margin: 0;
+            min-height: 100%;
+            padding-bottom: 0.5rem;
+            background: url("./download_files/bg.png") center top repeat-x ;
+            background-size: 100%;
+        }
+	
+        .icon {
+            display: block;
+            margin: 2.1rem auto 0;
+            width: 5.75rem;
+            height: 5.75rem;
+            border-radius: 0.9rem 0.9rem;
+            box-shadow: 0 2px 5px rgba(98, 98, 98, 0.4);
+        }
+
+
+        .name {
+            display: block;
+            margin: 1rem auto 0;
+            width: 15.25rem;
+            height: 3.55rem;
+        }
+
+        .nickname-introduction {
+          margin-top: 1.1rem;
+          padding: 0 0.5rem;
+          text-align: center;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          font-size: 1.2rem;
+          color: #f6fafd;
+        }
+
+        .nickname {
+          line-height: 1.9;
+          font-size: 1.3rem;
+        }
+
+        .copy {
+            margin-top: 1.9rem;
+            font-size: 1rem;
+            font-weight: 400;
+            text-align: center;
+            color: #566069;
+        }
+
+        .dl-btn-container {
+            margin: 1rem auto;
+            text-align: center;
+            font-size: 0;
+        }
+
+        .dl-btn {
+            display: block;
+            width: 9rem;
+            height: 2.3rem;
+			margin: 0 auto;
+        }
+
+		.dl-btn+.dl-btn {
+			margin-top: 1rem;
+		}
+
+        .dl-btn img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .footer {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            padding: 0.3rem 0 0.2rem;
+            text-align: center;
+            /*background: #fafafa;*/
+            color: #999;
+			font-size: 0.6rem;
+        }
+
+		.footer a {
+			color: inherit;
+			color: #353535;
+			text-decoration: none;
+			border-bottom: 1px solid;
+		}
+    </style>
+  	<link rel="stylesheet" href="./css/download.css">
+	<title>8号彩票</title>
+
+
+</head>
+<body class="success">
+	<div id="weixin-tip"><p><img src="./download_files/live_weixin.png" alt="微信打开"><span id="close" title="关闭" class="close">X</span></p></div>
+
+	
+	<div class="page-wrap">
+		<div class="download">
+			<div class="container">
+
+
+<img src="download_files/icon_no_shadow3x.png" alt="图标" title="8号彩票" class="icon" >
+<p class="nickname-introduction" id="nickname-introduction" style="line-height: 1.6;">8号彩票</p>
+
+<p class="nickname-introduction" id="nickname-introduction" style="line-height: 1.6;">手机购彩 方便快捷</p>
+</br>
+<div align="center">
+<a href='itms-services://?action=download-manifest&url=https%3a%2f%2fapp.8hcpvip.cc%2fmanifest.plist' class='android-btn' id='J_weixin'><img src='download_files/dl_ios_btn2x.png' alt='iOS 下载'></a>
+</div>
+</br>
+<div align="center">
+<a href='https://app.8hcpvip.cc/8haoapp.apk' class='android-btn' id='J_weixin'><img src='download_files/dl_android_btn2x.png' alt='Android 下载'></a>
+</div>
+
+<div class="footer copyright">
+Copyright© 2018 8号彩票, All rights reserved.
+</div>
+</div>
+			<div class="download-btn" id="=dl">
+				<script type="text/javascript">
+				document.write(cot);
+				window.onload = function(){
+					var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+					var tip = document.getElementById('weixin-tip');
+					var close = document.getElementById('close');
+					close.onclick = function(){
+						tip.style.display = 'none';
+					}
+					if(dev=="A"){
+						var btn = document.getElementById('J_weixin');
+						if(is_weixin) {
+							btn.onclick = function(){
+								tip.style.height = winHeight + 'px';
+								tip.style.display = 'block';
+								return false;
+							}
+						}
+						else{
+							if (/msie/i.test(navigator.userAgent)){ //ie brower
+								document.getElementById("J_weixin").click();
+							}else{
+								var e = document.createEvent('MouseEvent');
+								e.initEvent('click', false, false);
+								setTimeout(document.getElementById("J_weixin").dispatchEvent(e),2000);
+							}
+						}
+					}
+					else if( dev == "I"){
+						var btn_ios = document.getElementById('ios_weixin');
+						if(is_weixin){
+							btn_ios.onclick = function(){
+								tip.style.height = winHeight + 'px';
+								tip.style.display = 'block';
+								return false;
+							}
+						}
+						else{
+							if (/msie/i.test(navigator.userAgent)){ //ie brower
+								document.getElementById("ios_weixin").click();
+							}else{
+								var e = document.createEvent('MouseEvent');
+								e.initEvent('click', false, false);
+								setTimeout(document.getElementById("ios_weixin").dispatchEvent(e),2000);
+							}
+						}
+					}
+				}
+				</script>
+			</div>
+		</div>
+	</div>
+</body></html>
